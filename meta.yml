@@ -1,0 +1,91 @@
+hostname: centos-2gb-nbg1-1
+instance-id: 1324192
+local-ipv4: ''
+network-config:
+  config:
+  - mac_address: 96:00:00:13:5e:14
+    name: eth0
+    subnets:
+    - dns_nameservers:
+      - 213.133.99.99
+      - 213.133.100.100
+      - 213.133.98.98
+      ipv4: true
+      type: dhcp
+    type: physical
+  - name: eth0:0
+    subnets:
+    - address: 2a01:4f8:1c1c:7beb::1/64
+      gateway: fe80::1
+      ipv6: true
+      routes:
+      - gateway: fe80::1%eth0
+        netmask: 0
+        network: '::'
+      type: static
+    type: physical
+  version: 1
+network-sysconfig: "DEVICE='eth0'\nTYPE=Ethernet\nBOOTPROTO=dhcp\nONBOOT='yes'\nHWADDR=96:00:00:13:5e:14\n\
+  IPV6INIT=yes\nIPV6ADDR=2a01:4f8:1c1c:7beb::1/64\nIPV6_DEFAULTGW=fe80::1%eth0\nIPV6_AUTOCONF=no\n\
+  DNS1=213.133.99.99\nDNS2=213.133.100.100\n        "
+public-ipv4: 159.69.217.118
+public-keys:
+- ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCuicUzlnN+s5NtbuMxIZ7ai0SIg7n6hSmDQxRpzJRGIdoN4evmQm77/1/+XAXhA4Dtv7qUQPOlujB+9eVOn74Y5kC04ZCoCEnqVBmca9kNL5MnxBRy7Yk0xVVrrg870Zay1Elb3rFWcTaPem3j+8bnqc1FhVyuK7wBinZszUqPziQyQXBFlgJdufvkBquE3rfV0w6zAezLIZlQUc6l9kyilXPb+EKX0FEM3Hpjv0wgSBFZZ9jKaqayjhm2dY7Ey5URdBNwFt/iawFo5qn2Eco+SC74ozVZxDmzXTD7lq4xY+B9oRQQYrdj6hcsdCe7XPMw5dfAuLu3Wk/tunVohgdl
+  paulc@mbp.local
+vendor_data: "Content-Type: multipart/mixed; boundary=\"===============5200748666860934925==\"\
+  \nMIME-Version: 1.0\n\n--===============5200748666860934925==\nContent-Type: text/text/cloud-config;\
+  \ charset=\"us-ascii\"\nMIME-Version: 1.0\nContent-Transfer-Encoding: 7bit\nContent-Disposition:\
+  \ attachment; filename=\"cloud-config\"\n\n#cloud-config\nfqdn: centos-2gb-nbg1-1\n\
+  manage_etc_hosts: true\nrandom_seed:\n  data: !!binary |\n    eGxOUXNUb3VHeXZ0c3A4Y1ZyWlBDR05lc05rbDZ4THhSa2prOEdUQXhRZ3FSenlxSEpmamlQaXVs\n\
+  \    cXVYbjR3SHEwZ01JbkpwMTFIOTkreDFza3BkRHlWMmlUWitQaHo1QitzTDJsd2dJUDJUYS9yV3Vv\n\
+  \    VkZGbGxPS2tvNWU4aUxPSXlCc3VMN2RaZURuLzZ4cFpVV3NXbm50eThPRWRpeVdodEp1QjB1cnRK\n\
+  \    S1h5NEY3SWdQUmxqTkk5bFlwaFlGL3lyRUx5QzVrWHpUTVBkSGNKVmhxK2drcGpoTEJmek9DZXl4\n\
+  \    MVJSWUJXRUZrTUd4eC9QalYreFgvUi9IVkJBYndRT09NRDZBOTVQTC9VTzB2dnZjQkhXZjJiek1P\n\
+  \    WS9MeWd6cW93emt4U2xsNFlNZi9sTVA0VkE4L000a2M2KzZzcm9SR1hBbmJPdEd3bU40OGwrUHZ0\n\
+  \    YUpxWWpHV3BzOUt6NEh6N0JkTTNLT0gvcEVIblh0RzNUUHFReFEvWkVQOGNvWnFoVUpIS3lQTlJK\n\
+  \    UldyWFR3bDV4S0RacmRMaTg0VnhPbW53bCtLNWpET0R4a05MNytNb1RGcFZhSDZ5V3ZsSHpUQjdw\n\
+  \    ZjNuRUFscWptcERpalZUYkZvV2NYOUwrajc3MXhzaGtHK3p5Y3N5N1k3TzZ6cXBjOE9zY25VSjgr\n\
+  \    SStLVmJzSm8wSlRpU2RhMW96VWRIT2NoY0crN3doNGs4amR6dGNxbUtzSFZHL2hqWE4xbjJ0dHVZ\n\
+  \    WFByeFpXWHJxSFhycDg3cmI5S2R1VGpPSUJZaFBkWCs5c09lenJFanRoZGhKelF2ejZUMWEweUMv\n\
+  \    LzFQRlZ1TkVDSXE4TUtjOTlkOEpsUEppL0x0VC8yanBzRkJqRGh3NHVsc1hvZWtZOTFsVWlWRTFJ\n\
+  \    WCtZOHRKWFBtdDJ4QUNIWWpjb1RRL2dBampNeEZVamsvNHFiZUhSMllNeGF1TElrWXlwZjExcEdl\n\
+  \    ZHFpdWVaZWYvOUI2MFREQnE3QlJ5cUpDaERncnNvVGFsMmdPcUdMeDJKMXY4QUpWRjFPM2U4eTJH\n\
+  \    YnREaDI1OWxaOVZQb1Z5V0EyUWVMZzlDWXo3cjFpLzdManhsRWR0MXZSbE9RWGNKVWdZdDdNTDFi\n\
+  \    aVdyN1ZQeWNISnJyN0dSQW9ZSFAwSGdUSXV2amIxeGlUTFZydHU0aS8zRjRSOUtReGNRa014ZlVj\n\
+  \    NzJuU0c4dHp6bmxwMDBrelU5TGRtU202MFNUbzExUGZGVkhpeWFhVlFYRVBDa25PcVZsMzhuMWg3\n\
+  \    OVh2RnlYMHI1dU0zL0JBSU0wdDd5NFora1hRZ0hGQ0xFZ3pkR2NoUmhFRUEvMUZ0eXdFM25qYnUw\n\
+  \    cDNCdkJ5Y2NNSW10d3Z5cmVlK2M0dUFvMElyZlllMHg1eGFBRVp2dldzOUtPbHR4WFgxMWFqcW9v\n\
+  \    dzdvNXFyK0JQbFJjNjBIK2NYQW5ITzExcXVnQlVPdHFPYWo5YkhabGt4MGh4RURmWFlWbUVvejNF\n\
+  \    b0g1MVYxYVlRVEc1U0JiRlZRVXhEQWhPNldmTjc4d2hJWHowc2FiNi9Ya3hpVGliblpaRTE4N0ty\n\
+  \    MU9SYlAvUGVEOWZLZ0pGdzE5dnByMVIwYW5XQ0haTGhhRTVDMkMzSUg4WHZDNEt0ckhKdlFNZUo2\n\
+  \    Q3VuMXdCNnoxV2hsNFpLbEs5OEJSZlVXanRyWTcyRmt5Q2Z3UzFGbXF4SDZuSlVNc1AzcDBVWm9Z\n\
+  \    OVlnZnRHQlRuSkJQMDFoV0g5ZzlGOHpVSlNWVWpRWUN1NjBIN1hEN0JoMTNjSC8wb0V3SnVxWU9m\n\
+  \    L2Uzck5EeGlXVFdYeUtuWElsMjNqMEpob0NGN1pGcTFacWJpSzRzTHY4KzUzUWFSaisxYzUyR1FK\n\
+  \    Q3JJOUtLNkZmbEZrQVJhblhpK3VuWWhMa20vcjFjanFnUUNkYjUyQ3VxbFZ1NWNRNk9qZWtVUnNx\n\
+  \    TGN4R1pPZWdrUlpZUEN2QWxyS3BIM2wrdDlTeWx4UlpOMGtPZE5rMWdYUlNEMTY3UjJPeEF6dFhm\n\
+  \    UjR6SjhXbTFqRzRZTXVNbHVMekZUdUtDWDNMcVZJUXIzNzcyNmlHNHlzb014ckwxd3Z6cnpsNFZC\n\
+  \    NHdsTytVbUJDZXFvSTJVRE5HRkJ5NFZsNnpldmJla2NiK3ZOOWlISldBVkF3SlRZL0dsWEVRY3Jy\n\
+  \    bGZxTG8xd3REZkpjNkwwMmFCb0NWNHJoS25lNThOaGYxak1UQm8zOHEyVllHcENabTc0WXdFNUNT\n\
+  \    bjRtd0NPRTRuSGFNbkxjb0UzRnVVRUhPZ0RYb2oySW9WOWR0YkdGWERDMnNPWFpsYVRJNFVTZ0JL\n\
+  \    ZmdnZGhiTEdrTGRlM3FhTFRLRzcwY2YzQThncU4zZVRXUmlHZWc5MDE2RmJmYk9Sa01HaXhLUkJi\n\
+  \    Uy9OVmY2bUVHa0JibTFsQUtHOGs5NG5UZDQ0ZzhVdzhTOUJEYXFsdU9SNWNaNThMRy9aUW5Tb3hR\n\
+  \    dzF4b3hNY3dVWU0xWkJLNGlWWnp0eXlNWjRGNXN3UnZHTzI1NlladWtGdmdTZjdyRmZ4RXVUU1dk\n\
+  \    Vlc2bkViWkFlbTZ3VVA1WEw1TzhYa3Q3MzYrVlYyTEgvQzBXREMzUUVuVVNFSjdkOGpjaENoZ3VW\n\
+  \    bTVkYlBnUXZqZG5sRkk0YXczeDF2OHhtY2ZOanZCQWhhdTNKUzJiM2RIbG1INTRKSEI1RU9iUVBa\n\
+  \    UUtMSlhGZmhXQ1ByOHgvRzR6bXRHZVZoOHN3YkFvT0xmU3F3ZGYxL3BVOFZTeGZkcWhpeFNrWGFI\n\
+  \    bTBmOVBadko4cjQxWDlKNGRzcG95TjUrVnlMYnp1dmxTbUJXZFEwZnpRNTR6L1l2VkxZb1hKTlJy\n\
+  \    dE5iODRxT2VxOW5tTUs5MEhwRUtvd0hYc00yTW9PbGRZYXBqNGZaY1RrbHJZNmJoOUZ1RGhiRzdP\n\
+  \    ZHQ4RThBVnNpSkZ1YWJLbmE0R3dJQU9kcldyRHQ5OHM1MmduQlVnMm1ERXp1d2ZmZnlxZzVreGNi\n\
+  \    MEZoL3VMbHlnMU9vYXNIbGw4WTYwU3FFN0R5MklqYXluV2h6QW81dGliNE1BOUhrUEtSVTczTDll\n\
+  \    aThweURRK1FUZ3V3UHY5MmZmK2xKWnJjODRKaHBVdDA4TWNqM240RTZ4UXNwUzNoUXBlL25UeHo1\n\
+  \    VWZZaVFlT2lMbW5sU3dIeUdQcWFKS2VaeGVrUDFnUEpLbkExb01SeGVmbmlHbEZXbDY4Vkt5bGtI\n\
+  \    eEwxZFdodFlvRXdmMVFYL1pjdkdqR3ZDQWptbWw5NC91RHZZYklhMlM3VGNXNDNVbWZiMTJwdGpt\n\
+  \    T0YxRWZ3NlJlTDlNRjkwTDZsU3Nack92TDlGaktiVGxBb0VMNk9kS2REK2xncXA1Z3dqNEt3TnF1\n\
+  \    S0xPYU0yUWp3dWJ0UldiRVhlZitYZ3ZPUjU2cU9vd2xRaVp0aElaQjMzU21NdDltK3ozR0R4Y2lZ\n\
+  \    WTJoYm40VURKNDB2THROTkVpa1RjdjN2THJiNHVNZEh6Yit4cmFXai85RVJoRDE1THpmR1NVV2FZ\n\
+  \    UDJUaHVYUVZlZyt2RWtkM3ZKTzY4cGFVVDRPSTd1NklYV2lsbGtaRmpLaEozQjZlZ0RQYz0=\n\
+  \  encoding: base64\n  file: /dev/urandom\nsystem_info:\n  default_user:\n    lock_passwd:\
+  \ true\n    name: root\n    shell: /bin/bash\n  distro: centos\n\n--===============5200748666860934925==\n\
+  Content-Type: text/text/cloud-boothook; charset=\"us-ascii\"\nMIME-Version: 1.0\n\
+  Content-Transfer-Encoding: 7bit\nContent-Disposition: attachment; filename=\"hc-boot-script\"\
+  \n\n#!/bin/bash\n\n--===============5200748666860934925==--\n"
